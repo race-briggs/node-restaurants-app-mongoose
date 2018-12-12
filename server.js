@@ -1,7 +1,7 @@
 "use strict";
 
-const express = require("express");
-const mongoose = require("mongoose");
+const express = require('express');
+const mongoose = require('mongoose');
 
 // Mongoose internally uses a promise-like object,
 // but its better to make Mongoose use built in es6 promises
@@ -120,6 +120,7 @@ let server;
 
 // this function connects to our database, then starts the server
 function runServer(databaseUrl, port = PORT) {
+
   return new Promise((resolve, reject) => {
     mongoose.connect(
       databaseUrl,
